@@ -326,8 +326,7 @@ if __name__ == "__main__":
         with timer("SuffixArray"):
             __run_command(
                 f"python scripts/make_suffix_array.py {temp_text}"
-                f"{' ulimit -Sn 100000' if args.use_ulimit else ''}"
-                f"{' --tokenize' if args.use_tokenizer else ''}",
+                f"{' ulimit -Sn 1048576' if args.use_ulimit else ''}",
                 args.google_repo_path
             )
 
